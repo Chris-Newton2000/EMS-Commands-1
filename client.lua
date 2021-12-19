@@ -1,12 +1,14 @@
-RegisterCommand('cp', function(source, args))
-    TriggerEvent('chat:addMessage', {
-        args = {'^1 Checking Pulse... ^1'}  
-    }}
+RegisterCommand("cp", function(source, args)
+    TriggerServerEvent('cp', table.concat(args, " "))
+    
+end)
 
-RegisterCommand('medkit', function(source, args))
-    TriggerEvent('chat:addMessage', {
-        args = {'^1 Applies Medkit and gauze... ^1'}
-    }}
+RegisterCommand("medkit", function(source, args)
+    TriggerServerEvent('medkit', table.concat(args, " "))
+    
+end)
+
+
 
 RegisterCommand('ems-duty-start', function(source, args))
     TriggerEvent('chat:addMessage', {
