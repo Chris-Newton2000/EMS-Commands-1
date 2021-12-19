@@ -1,0 +1,11 @@
+RegisterServerEvent('cp')
+AddEventHandler('me', function(param)
+  print('~b~Checking pulse to the suspect/patient...~b~'.. param)
+  TriggerClientEvent('chatMessage', -1, '~r~[ME]~r~', {0,0,0} , param)
+end)
+
+RegisterServerEvent('medkit')
+AddEventHandler('medkit', function(param)
+  print('~b~Applies medkit and gauze to the suspect/patient...~b~'.. param)
+  TriggerClientEvent('chatMessage', -1, '~o~[DO]~o~', {0,0,0} , param)
+end)
